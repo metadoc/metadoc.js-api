@@ -6,7 +6,7 @@ class ApiGenerator extends MetadocPlugin {
   constructor () {
     super(...arguments)
 
-    this.NAME = require('./package.json').name
+    this.NAME = require(path.join(__dirname, 'package.json')).name
     this.APIROOT = '/'
   }
 

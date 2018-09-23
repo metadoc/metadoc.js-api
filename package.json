@@ -2,7 +2,9 @@
   "name": "@author.io/metadoc-api",
   "version": "1.0.3",
   "description": "Generate a static (read-only) JSON API from metadoc output.",
-  "bin": "cli.js",
+  "bin": {
+    "metadoc-api": "cli.js"
+  },
   "main": "index.js",
   "scripts": {
     "test": "tap -R spec test/*.js && standard --verbose | snazzy"
@@ -28,6 +30,6 @@
     "tap": "^12.0.1"
   },
   "dependencies": {
-    "@author.io/metadoc-plugin": "^1.0.9"
+    "@author.io/metadoc-plugin": "^1.0.10"
   }
 }
