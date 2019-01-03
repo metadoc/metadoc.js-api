@@ -26,12 +26,13 @@ The file structure will always contain:
 
 An example of the `index.json` (last file) may be:
 
-```json
-"full_spec_href": "https://domain.com/4.0.0/api.json",
-"bus_href": "https://domain.com/4.0.0/api.bus.json",
-"exceptions_href": "https://domain.com/4.0.0/api.exceptions.json",
-"class_href": "https://domain.com/4.0.0/api.classes.json",
-"namespace_href": "https://domain.com/4.0.0/api.namespaces.json"
+```js
+{
+  "full_spec_href": "https://domain.com/4.0.0/api.json",
+  "bus_href": "https://domain.com/4.0.0/api.bus.json",
+  "exceptions_href": "https://domain.com/4.0.0/api.exceptions.json",
+  "class_href": "https://domain.com/4.0.0/api.classes.json",
+  "namespace_href": "https://domain.com/4.0.0/api.namespaces.json"
 }
 ```
 
