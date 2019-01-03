@@ -59,6 +59,8 @@ Testing your API locally can be done with any static web host. We recommend usin
 
 ![Fenix Web Server](https://github.com/author/metadoc-api/blob/master/fenix.png)
 
+Fenix will support static hosting and default file modification. Oh, and it's free.
+
 ## Guiding Principles
 
 This is a read-only/static API, but it attempts to follow reasonable API guidelines. For example, subresources are all identified with a `href` or `_href` attribute, allowing API clients to traverse the entire API programmatically.
