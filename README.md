@@ -53,6 +53,12 @@ The example above will produce links prefixed with `https://domain.com/2.0.0/`.
 
 **--version auto** can be used to automatically identify the version from a local `package.json` file. The source directory will be searched for a `package.json` file first, then the current working directory.
 
+## Testing Locally
+
+Testing your API locally can be done with any static web host. We recommend using [Fenix Web Server](https://fenixwebserver.com).
+
+
+
 ## Guiding Principles
 
 This is a read-only/static API, but it attempts to follow reasonable API guidelines. For example, subresources are all identified with a `href` or `_href` attribute, allowing API clients to traverse the entire API programmatically.
