@@ -57,7 +57,7 @@ The example above will produce links prefixed with `https://domain.com/2.0.0/`.
 
 Testing your API locally can be done with any static web host. We recommend using [Fenix Web Server](https://fenixwebserver.com).
 
-
+![Fenix Web Server](https://github.com/author/metadoc-api/blob/master/fenix.png)
 
 ## Guiding Principles
 
