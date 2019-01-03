@@ -68,23 +68,26 @@ This is a read-only/static API, but it attempts to follow reasonable API guideli
 
 The API aims to be as simple as possible, but documentation websites are often more complex than they appear. To facilitate the simplest development flow possible, a few helper files are generated and put in the API root:
 
-**index.json**
+### index.json
+
 This file acts like `index.html` would in a web server, i.e. the default page served when no other is specified. It contains links to the primary resources documented in the API.
 
-**api.json**
+### api.json
+
 This is a failsafe file. It contains all of the output from metadoc, in case you can't get the detail you need from anywhere else. _WARNING:_ This file can be really, really big (10K+ lines). Use alternatives whenever possible.
 
-**api.bus.json**
- Remember, metadoc was designed for [NGN](https://github.com/ngnjs/ngn), which is an object oriented programming library focused around a core event emitter. The bus is an event bus. This file contains all of the events triggered by an event bus. If you're not using NGN, this file may or may not be of use to you.
+### api.bus.json
 
- **api.classes.json**
+Remember, metadoc was designed for [NGN](https://github.com/ngnjs/ngn), which is an object oriented programming library focused around a core event emitter. The bus is an event bus. This file contains all of the events triggered by an event bus. If you're not using NGN, this file may or may not be of use to you.
 
- This file contains a list of all available classes in the code being documented.
+### api.classes.json
 
- **api.exceptions.json**
+This file contains a list of all available classes in the code being documented.
 
- This file contains all of the global/customer exceptions triggered by the code being documented.
+### api.exceptions.json
 
- **api.namespaces.com**
+This file contains all of the global/customer exceptions triggered by the code being documented.
 
- This file contains all of the namespaces recognized within the code being documented.
+### api.namespaces.com
+
+This file contains all of the namespaces recognized within the code being documented.
