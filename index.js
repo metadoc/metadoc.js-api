@@ -59,13 +59,15 @@ class ApiGenerator extends MetadocPlugin {
     fs.writeFileSync(path.join(this.mkdirp(this.output), 'api.classes.json'), JSON.stringify(this.classList, null, 2))
     fs.writeFileSync(path.join(this.mkdirp(this.output), 'api.exceptions.json'), JSON.stringify(this.data.exceptions, null, 2))
     fs.writeFileSync(path.join(this.mkdirp(this.output), 'api.bus.json'), JSON.stringify(this.data.bus, null, 2))
+    fs.writeFileSync(path.join(this.mkdirp(this.output), 'api.types.json'), JSON.stringify(this.data.types, null, 2))
     fs.writeFileSync(path.join(this.mkdirp(this.output), 'api.namespaces.json'), JSON.stringify(this.manifest, null, 2))
     fs.writeFileSync(path.join(this.mkdirp(this.output), 'index.json'), JSON.stringify({
       full_spec_href: `${this.APIROOT}api.json`,
       bus_href: `${this.APIROOT}api.bus.json`,
       exceptions_href: `${this.APIROOT}api.exceptions.json`,
       class_href: `${this.APIROOT}api.classes.json`,
-      namespace_href: `${this.APIROOT}api.namespaces.json`
+      namespace_href: `${this.APIROOT}api.namespaces.json`,
+      type_href: `${this.APIROOT}api.types.json`
     }, null, 2))
 
     this.emit('complete')
