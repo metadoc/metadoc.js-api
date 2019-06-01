@@ -1,6 +1,6 @@
 {
   "name": "@author.io/metadoc-api",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Generate a static (read-only) JSON API from metadoc output.",
   "bin": {
     "metadoc-api": "cli.js"
