@@ -61,12 +61,23 @@ class ApiGenerator extends MetadocPlugin {
     fs.writeFileSync(path.join(this.mkdirp(this.output), 'api.bus.json'), JSON.stringify(this.data.bus, null, 2))
     fs.writeFileSync(path.join(this.mkdirp(this.output), 'api.types.json'), JSON.stringify(this.data.types, null, 2))
     fs.writeFileSync(path.join(this.mkdirp(this.output), 'api.namespaces.json'), JSON.stringify(this.manifest, null, 2))
+
+    let globals = this.manifest
+
+    if (this.manifest.hasOwnProperty('NGN')) {
+      globals.Events = { href: `${this.APIROOT}api.bus.json` }
+      globals.Exceptions = { href: `${this.APIROOT}api.exceptions.json` }
+    }
+
+    this.manifest.global.classes.forEach(cls => globals[cls.name] = this.classList[cls.name])
+
+    delete globals.global
+console.log(globals)
     fs.writeFileSync(path.join(this.mkdirp(this.output), 'index.json'), JSON.stringify({
+      globals,
       full_spec_href: `${this.APIROOT}api.json`,
-      bus_href: `${this.APIROOT}api.bus.json`,
-      exceptions_href: `${this.APIROOT}api.exceptions.json`,
       class_href: `${this.APIROOT}api.classes.json`,
-      namespace_href: `${this.APIROOT}api.namespaces.json`,
+      // namespace_href: `${this.APIROOT}api.namespaces.json`,
       type_href: `${this.APIROOT}api.types.json`
     }, null, 2))
 
